@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urlify.Server", "Urlify\Server\Urlify.Server.csproj", "{711D9B7A-E949-4169-A01D-79C4D3944BF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urlify.Client", "Urlify\Client\Urlify.Client.csproj", "{D272E668-0DE6-4FA6-98E4-7DFB5346511C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urlify.Shared", "Urlify\Shared\Urlify.Shared.csproj", "{A651DCBC-1240-4FE6-990E-6079F67115C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{711D9B7A-E949-4169-A01D-79C4D3944BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{711D9B7A-E949-4169-A01D-79C4D3944BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{711D9B7A-E949-4169-A01D-79C4D3944BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{711D9B7A-E949-4169-A01D-79C4D3944BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D272E668-0DE6-4FA6-98E4-7DFB5346511C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D272E668-0DE6-4FA6-98E4-7DFB5346511C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D272E668-0DE6-4FA6-98E4-7DFB5346511C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D272E668-0DE6-4FA6-98E4-7DFB5346511C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A651DCBC-1240-4FE6-990E-6079F67115C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A651DCBC-1240-4FE6-990E-6079F67115C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A651DCBC-1240-4FE6-990E-6079F67115C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A651DCBC-1240-4FE6-990E-6079F67115C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6309DCDD-FEAE-49A0-ABC9-19B3AA3C4897}
+	EndGlobalSection
+EndGlobal

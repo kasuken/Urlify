@@ -1,0 +1,31 @@
+﻿@page "/"
+@using Urlify.Shared
+@inject HttpClient Http
+
+<h1>Urlify</h1>
+
+<input @bind="Url" />
+
+<button class="btn btn-primary" @onclick="CreateUrl">Create short Url</button>
+
+<div>@ShortUrl</div>
+
+@code {
+
+    private string Url { get; set; }
+
+    private string ShortUrl { get; set; }
+
+
+    private async Task CreateUrl()
+    {
+        var urlify = new UrlifyLink();
+        urlify.Url = Url;
+
+        var result = await Http.PostAsJsonAsync<UrlifyLink>("Urlify", urlify);
+
+        var urlShort = await result.Content.ReadFromJsonAsync<UrlifyLink>();
+
+        ShortUrl = urlShort.ShortUrl;
+    }
+}

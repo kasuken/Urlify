@@ -1,0 +1,19 @@
+﻿@page "/r/{shortLink}"
+@using Urlify.Shared
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h1>Redirecting...</h1>
+
+@code {
+
+    [Parameter]
+    public string shortLink { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var shortUrl = await Http.GetFromJsonAsync<UrlifyLink>($"Urlify/GetById/{shortLink}");
+
+        NavManager.NavigateTo($"{shortUrl.Url}", forceLoad: true);
+    }
+}

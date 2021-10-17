@@ -14,9 +14,9 @@ namespace Urlify.Server.Controllers
     public class UrlifyController : ControllerBase
     {
         private readonly ILogger<UrlifyController> _logger;
-        private readonly ILiteDbUrlifyService _urlifyDbService;
+        private readonly IUrlifyService _urlifyDbService;
 
-        public UrlifyController(ILogger<UrlifyController> logger, ILiteDbUrlifyService liteDbUrlifyService)
+        public UrlifyController(ILogger<UrlifyController> logger, IUrlifyService liteDbUrlifyService)
         {
             _logger = logger;
             _urlifyDbService = liteDbUrlifyService;

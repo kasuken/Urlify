@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Urlify.Server;
 using Urlify.Shared;
 
-public class LiteDbUrlifyService : ILiteDbUrlifyService
+public class LiteDbUrlifyService : IUrlifyService
 {
     private LiteDatabase _liteDb;
 
@@ -40,11 +40,3 @@ public class LiteDbUrlifyService : ILiteDbUrlifyService
     }
 }
 
-public interface ILiteDbUrlifyService
-{
-    IEnumerable<UrlifyLink> FindAll();
-    UrlifyLink FindOne(int id);
-    int Insert(UrlifyLink url);
-    bool Update(UrlifyLink url);
-
-}

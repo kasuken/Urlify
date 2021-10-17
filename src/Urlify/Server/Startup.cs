@@ -25,7 +25,7 @@ namespace Urlify.Server
             services.Configure<LiteDbOptions>(Configuration.GetSection("LiteDbOptions"));
 
             services.AddSingleton<ILiteDbContext, LiteDbContext>();
-            services.AddTransient<ILiteDbUrlifyService, LiteDbUrlifyService>();
+            services.AddTransient<IUrlifyService, LiteDbUrlifyService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();

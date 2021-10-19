@@ -520,6 +520,37 @@ html {
   opacity: 1
 }
 
+.urlify .landing .toast {
+  position: absolute;
+  right: 2%;
+  bottom: 6%;
+  padding: 1.5rem 2rem;
+  background-color: #b2dcb2;
+  border-radius: 8px;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: all .45s cubic-bezier(.6, -.05, .01, .99);
+  transform: translateX(200%);
+  font-size: 14px
+}
+
+@media screen and (min-width:768px) {
+  .urlify .landing .toast {
+    font-size: calc(11.33333px + .34722vw)
+  }
+}
+
+@media screen and (min-width:1920px) {
+  .urlify .landing .toast {
+    font-size: 18px
+  }
+}
+
+.urlify .landing .toast.visible {
+  transform: translateX(0)
+}
+
 .urlify-desk {
   display: none
 }

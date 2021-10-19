@@ -9,6 +9,7 @@
         <input @bind="Url" class="urlify-input landing__input" type="url" id="" name="shrinker" placeholder="Enter your link here" />
         <a @onclick="CreateUrl" class="urlify-btn " href="">Shorten</a>
     </div>
+    <p class="toast"></p>
 
     @if (!String.IsNullOrEmpty(ShortUrl)) {
         <div class="landing__short">
@@ -16,7 +17,6 @@
             <img class="landing__short--icon" src="./images/Copy_Icon.svg" alt="Copy Icon"/>
         </div>
     }
-
 </div>
 
 @code {
@@ -33,3 +33,9 @@
         ShortUrl = urlShort.ShortUrl;
     }
 }
+
+
+@* TODO: *@
+@* - Remove app loader that freezes GSAP animations *@
+@* - Create CopyTpClipboard functionality as demo does *@
+@* - Generate and add favicons set *@

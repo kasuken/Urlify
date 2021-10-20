@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Urlify</title>
-    <base href="/" />
-    <link href="Urlify.Client.styles.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-</head>
+        <!-- Primary Meta Tags -->
+        <title>Urlify.app - Your easy, clean and nice URL shortener.</title>
+        <meta name="title" content="Urlify.app - Your easy, clean and nice URL shortener.">
+        <meta name="description" content="Most link shorteners do too much. This one just makes your links shorter.">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.urlify.app/">
+        <meta property="og:title" content="Urlify.app - Your easy, clean and nice URL shortener.">
+        <meta property="og:description" content="Most link shorteners do too much. This one just makes your links shorter.">
+        <meta property="og:image" content="https://i.ibb.co/vPcHnCj/Urlify.png">
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://www.urlify.app/">
+        <meta property="twitter:title" content="Urlify.app - Your easy, clean and nice URL shortener.">
+        <meta property="twitter:description" content="Most link shorteners do too much. This one just makes your links shorter.">
+        <meta property="twitter:image" content="https://i.ibb.co/vPcHnCj/Urlify.png">
 
-<body class="urlify">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="manifest" href="favicons/site.webmanifest">
+        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#575664">
+        <meta name="msapplication-TileColor" content="#575664">
+        <meta name="theme-color" content="#575664">
+        <base href="/" />
+        <link href="css/app.css" rel="stylesheet" />
+    </head>
 
-    <nav class="navbar">
-        <div class="navbar__wrp">
-            <div class="navbar__logo stagger"><a href="/"> <img class="navbar__logo--img" src="./images/Urlify_logo.svg" alt="Urlify Logo"/>
-                <h2 class="navbar__logo--title urlify-desk">Urlify</h2></a></div>
-            <div class="navbar__nav stagger"><a class="navbar__nav--item" href="https://github.com/kasuken/Urlify"><img class="navbar__nav--item-image" src="./images/Github.svg" alt="GitHub Logo"/></a></div>
+    <body class="urlify">
+        <nav class="navbar">
+            <div class="navbar__wrp">
+                <div class="navbar__logo stagger"><a href="/"> <img class="navbar__logo--img" src="./images/Urlify_logo.svg" alt="Urlify Logo"/>
+                    <h2 class="navbar__logo--title urlify-desk">Urlify</h2></a></div>
+                <div class="navbar__nav stagger"><a class="navbar__nav--item" href="https://github.com/kasuken/Urlify"><img class="navbar__nav--item-image" src="./images/Github.svg" alt="GitHub Logo"/></a></div>
+            </div>
+        </nav>
+        <div class="bg">
+            <img class="bg--img" src="./images/Urlify_logo.svg" alt="Urlify Logo"/>
         </div>
-    </nav>
+        <div id="app" class="landing">Loading...</div>
+        <footer class="footer">
+            <div class="footer__wrp">
+                <div class="footer__credits"><span class="footer__credits--copy">@ 2021 Urlify. All rights reserved. | Designed by <a href="https://github.com/Th3Wall">Th3Wall</a></span></div>
+            </div>
+        </footer>
 
-    <div class="bg">
-        <img class="bg--img" src="./images/Urlify_logo.svg" alt="Urlify Logo"/>
-    </div>
-
-    <div id="app" class="landing">Loading...</div>
-
-    <!-- <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div> -->
-
-    <footer class="footer">
-        <div class="footer__wrp">
-            <div class="footer__credits"><span class="footer__credits--copy">@ 2021 Urlify. All rights reserved. | Designed by <a href="https://github.com/Th3Wall">Th3Wall</a></span></div>
-        </div>
-    </footer>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-    <script src="js/scripts-min.js"></script>
-    <script src="_framework/blazor.webassembly.js"></script>
-</body>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+        <script src="js/scripts-min.js"></script>
+        <script src="_framework/blazor.webassembly.js"></script>
+    </body>
 </html>

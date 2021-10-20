@@ -4,7 +4,7 @@
 @inject ClipboardService ClipboardService
 
 <div class="landing__wrp">
-    <h1 class="landing__title stagger">Urlify.me</h1>
+    <h1 class="landing__title stagger">Urlify.app</h1>
     <p class="landing__subtitle stagger">Most link shorteners do too much.<br/>This one just makes your links shorter.</p>
     <div class="landing__inputWrp stagger">
         <input @bind="Url" class="urlify-input landing__input" type="url" id="" name="shrinker" placeholder="Enter your link here" />
@@ -14,7 +14,7 @@
 
     @if (!String.IsNullOrEmpty(ShortUrl)) {
         <div class="landing__short">
-            <p class="landing__short--link">@ShortUrl</p>
+            <p class="landing__short--link">urlify.app/r/@ShortUrl</p>
             <img class="landing__short--icon" src="./images/Copy_Icon.svg" alt="Copy Icon" @onclick="CopyToClipboard"/>
         </div>
     }
@@ -25,7 +25,8 @@
 
     private string ShortUrl { get; set; }
 
-    private readonly IJSRuntime _jsRuntime;
+    [Inject]
+    IJSRuntime JSRuntime { get; set; }
 
     private async Task CreateUrl()
     {
@@ -39,10 +40,10 @@
     private async Task CopyToClipboard()
     {
         try {
-            await ClipboardService.WriteTextAsync(ShortUrl);
-            await _jsRuntime.InvokeAsync<string>("displayToast");
+            await ClipboardService.WriteTextAsync("https://www.urlify.app/r/" + ShortUrl);
+            await JSRuntime.InvokeAsync<string>("displayToast");
         }
-        catch {
+        catch (Exception ex) {
             Console.WriteLine("Cannot write text to clipboard");
         }
     }

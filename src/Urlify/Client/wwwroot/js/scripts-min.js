@@ -25,14 +25,14 @@ $(document).ready(() => {
     const copyToClipboard = str => {
         navigator.clipboard.writeText(str).then(() => displayToast());
     };
-
-    const displayToast = () => {
-        const $toast = $('.toast');
-        $toast.text("Successfully copied to clipboard");
-        $toast.toggleClass('visible');
-        
-        setTimeout(() => {
-            $toast.toggleClass('visible');
-        }, 3000);
-    }
 });
+
+function displayToast() {
+    const $toast = $('.toast');
+    $toast.text("Successfully copied to clipboard");
+    $toast.toggleClass('visible');
+
+    setTimeout(() => {
+        $toast.toggleClass('visible');
+    }, 3000);
+}

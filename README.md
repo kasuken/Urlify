@@ -44,7 +44,7 @@ Contributions are always welcome!
   
 ## License
 
-[MIT](license.md)
+[MIT](https://github.com/kasuken/Urlify/blob/main/LICENSE.md)
 
   
 ## Authors

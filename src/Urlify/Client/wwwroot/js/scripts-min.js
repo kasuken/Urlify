@@ -1,1 +1,38 @@
-"use strict";$(document).ready((function(){var t=$(".landing__short--icon"),o=$(".footer"),a=$(".bg"),r=$(".bg--img"),e=$(".navbar__wrp .stagger"),i=$(".landing__wrp .stagger"),n=gsap.timeline({defaults:{duration:.7,ease:Back.easeOut.config(0),opacity:0}});n.set(a,{right:0,top:0}),n.set(r,{bottom:0}),n.fromTo(a,{opacity:0},{opacity:1}).from(r,{bottom:50},"-=.25").from(e,{y:-20,stagger:{amount:.25,from:"start"}},"+=.3").from(o,{y:20},"<").from(i,{y:20,stagger:{amount:.4,from:"start"}},"-=.5"),t.on("click",(function(){var t=$(".landing__short--link");s(t.text())}));var s=function(t){navigator.clipboard.writeText(t).then((function(){return g()}))},g=function(){var t=$(".toast");t.text("Successfully copied to clipboard"),t.toggleClass("visible"),setTimeout((function(){t.toggleClass("visible")}),3e3)}}));
+$(document).ready(() => {
+    const $clipboardIcon = $('.landing__short--icon');
+    const $footer = $('.footer');
+    const $greyBg = $('.bg');
+    const $chain = $('.bg--img');
+    const $navbarElements = $('.navbar__wrp .stagger');
+    const $landingElements = $('.landing__wrp .stagger');
+
+    const tl = gsap.timeline({defaults: { duration: .7, ease: Back.easeOut.config(0), opacity: 0 }});
+    tl.set($greyBg, { right: 0, top: 0 });
+    tl.set($chain, { bottom: 0 });
+
+    tl
+    .fromTo($greyBg, { opacity: 0 }, { opacity: 1 })
+    .from($chain, { bottom: 50 }, "-=.25")
+    .from($navbarElements, { y: -20, stagger: { amount: 0.25, from: "start" }}, "+=.3")
+    .from($footer, { y: 20 }, "<")
+    .from($landingElements, { y: 20, stagger: { amount: 0.4, from: "start" }}, "-=.5")
+
+    $clipboardIcon.on('click', () => {
+        let $shortenedUrl = $('.landing__short--link');
+        copyToClipboard($shortenedUrl.text());
+    });
+
+    const copyToClipboard = str => {
+        navigator.clipboard.writeText(str).then(() => displayToast());
+    };
+
+    const displayToast = () => {
+        const $toast = $('.toast');
+        $toast.text("Successfully copied to clipboard");
+        $toast.toggleClass('visible');
+        
+        setTimeout(() => {
+            $toast.toggleClass('visible');
+        }, 3000);
+    }
+});

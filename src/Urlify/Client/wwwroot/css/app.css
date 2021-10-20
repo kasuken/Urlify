@@ -264,6 +264,19 @@ html {
   }
 }
 
+.urlify .footer__credits--copy a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: #e1ae5f;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .2s cubic-bezier(.6, -.05, .01, .99)
+}
+
+.urlify .footer__credits--copy a:hover {
+  opacity: .65
+}
+
 .urlify .bg {
   position: absolute;
   background-color: #575664;
@@ -466,7 +479,7 @@ html {
   font-weight: 600;
   line-height: 1.4;
   text-align: center;
-  color: #575664;
+  color: #999;
   background-color: #f0f0f0;
   border-radius: 18px;
   padding: .2rem 5%;

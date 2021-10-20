@@ -25,6 +25,8 @@
 
     private string ShortUrl { get; set; }
 
+    private readonly IJSRuntime _jsRuntime;
+
     private async Task CreateUrl()
     {
         var urlify = new UrlifyLink();
@@ -38,6 +40,7 @@
     {
         try {
             await ClipboardService.WriteTextAsync(ShortUrl);
+            await _jsRuntime.InvokeAsync<string>("displayToast");
         }
         catch {
             Console.WriteLine("Cannot write text to clipboard");

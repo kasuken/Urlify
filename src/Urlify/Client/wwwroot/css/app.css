@@ -1,5 +1,29 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
 .urlify-btn {
   display: block;
   background: linear-gradient(90deg, #77490a, #e1ae5f);
@@ -128,6 +152,39 @@ html {
 body,
 html {
   overflow-x: hidden
+}
+
+.urlify .loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  z-index: 11;
+  background-color: #575664;
+  opacity: 1;
+  opacity: 0;
+  animation: fade-in .8s cubic-bezier(.6, -.05, .01, .99) reverse
+}
+
+.urlify .loader h2 {
+  color: #fff;
+  font-size: 26px
+}
+
+@media screen and (min-width:768px) {
+  .urlify .loader h2 {
+    font-size: calc(19.33333px + .86806vw)
+  }
+}
+
+@media screen and (min-width:1920px) {
+  .urlify .loader h2 {
+    font-size: 36px
+  }
 }
 
 .urlify .navbar {
@@ -293,7 +350,7 @@ html {
     border-radius: 17%;
     width: 66vw;
     height: 60vw;
-    transform: translate(50%, -50%) rotate(45deg)
+    transform: translate(40%, -60%) rotate(45deg)
   }
 }
 
@@ -301,8 +358,23 @@ html {
   width: 30%;
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 64%;
   transform: translate(-50%, 50%) rotate(-65deg)
+}
+
+.urlify .landing__wrp .stagger:first-child {
+  -webkit-animation-delay: .25s;
+  animation-delay: .25s
+}
+
+.urlify .landing__wrp .stagger:nth-child(2) {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s
+}
+
+.urlify .landing__wrp .stagger:nth-child(3) {
+  -webkit-animation-delay: .75s;
+  animation-delay: .75s
 }
 
 .urlify .landing {
@@ -326,6 +398,12 @@ html {
   .urlify .landing__wrp {
     align-items: center
   }
+}
+
+.urlify .landing__wrp .stagger {
+  opacity: 0;
+  -webkit-animation: fade-in .8s cubic-bezier(.6, -.05, .01, .99) forwards;
+  animation: fade-in .8s cubic-bezier(.6, -.05, .01, .99) forwards
 }
 
 .urlify .landing__title {

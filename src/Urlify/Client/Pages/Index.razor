@@ -13,7 +13,7 @@
     <p class="toast"></p>
 
     @if (!String.IsNullOrEmpty(ShortUrl)) {
-        <div class="landing__short">
+        <div class="landing__short stagger">
             <p class="landing__short--link">urlify.app/r/@ShortUrl</p>
             <img class="landing__short--icon" src="./images/Copy_Icon.svg" alt="Copy Icon" @onclick="CopyToClipboard"/>
         </div>
@@ -48,8 +48,3 @@
         }
     }
 }
-
-
-@* TODO: *@
-@* - Remove app loader that freezes GSAP animations *@
-@* - Generate and add favicons set *@

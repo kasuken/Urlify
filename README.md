@@ -1,6 +1,13 @@
+![Image of Urlify Project](https://github.com/Th3Wall/assets-cdn/blob/main/Urlify/Urlify_readme.jpg)
 # Urlify
 
 An URL shortener written in C#, Blazor and Fauna as database
+
+## Demo
+
+Here you can find the demo link:
+
+- [Urlify.app](https://www.urlify.app/)
 
 
 ## Features
